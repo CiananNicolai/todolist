@@ -1,1 +1,17 @@
 /* Enter your custom styles here */
+
+html[dir="ltr"] .todolist .openPopoverButton.sapMBtn {
+    margin-right: 33rem;
+    color: red;
+ }
+ 
+ html[dir="rtl"] .todolist .openPopoverButton.sapMBtn {
+    margin-left: 0.125rem;
+    color: red;
+ }
+ 
+ .todolist .openPopoverButton {
+    display: inline-block;
+    font-weight: bold;
+    color: red;
+ }

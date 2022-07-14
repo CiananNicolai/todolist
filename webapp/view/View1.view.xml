@@ -18,6 +18,7 @@
 				<ToggleButton text="Drag and Create" id="enableAppointmentsCreate" pressed="{settings>/enableAppointmentsCreate}"/>
 				<ToggleButton text="Resize" id="enableAppointmentsResize" pressed="{settings>/enableAppointmentsResize}"/>
 			</OverflowToolbar>
+            <Button id="ReminderAlert" text="You have one up coming meeting!" type="Critical" press = "onPress" />
 		<SinglePlanningCalendar
 			id="SPC1"
 			class="sapUiSmallMarginTop"

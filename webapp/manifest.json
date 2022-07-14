@@ -7,7 +7,7 @@
         "applicationVersion": {
             "version": "0.0.1"
         },
-        "title": "{{appTitle}}",
+        "title": "SAP To-Do List",
         "description": "{{appDescription}}",
         "resources": "resources.json",
         "sourceTemplate": {

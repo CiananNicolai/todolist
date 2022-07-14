@@ -14,7 +14,7 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 	var CalendarDayType = unifiedLibrary.CalendarDayType;
 	var ValueState = coreLibrary.ValueState;
 	var StickyMode = mobileLibrary.PlanningCalendarStickyMode;
-    console.log("Lorem ipsum dolor sit ametre et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+    console.log("!!!!!!! ATTENTION VIEW 1 IS LOADING !!!!!!!!!!!");
     
 
 	return Controller.extend("todolist.todolist.controller.View1", {
@@ -517,6 +517,19 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 			}
 		},
 
+        ReminderHide: function (oEvent) {
+            var ReminderAlert = this.getView().byId("ReminderAlert");
+            if(ReminderAlert.getVisible(false)) {
+                
+                ReminderAlert.setVisible(true);
+           }},
+
+        onPress: function (oEvent) {
+            var ReminderAlert = this.getView().byId("ReminderAlert");
+            if(ReminderAlert.getVisible()) {
+                ReminderAlert.setVisible(false);
+           }},
+
 		handleOpenLegend: function (oEvent) {
 			var oSource = oEvent.getSource(),
 				oView = this.getView();
@@ -539,7 +552,9 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 					oLegendPopover.openBy(oSource);
 				}
 			});
-		}
+		},
+
+        
 	});
 });
 
