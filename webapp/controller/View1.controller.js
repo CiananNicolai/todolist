@@ -72,6 +72,14 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 			oModel.setData({allDay: false});
 			this.getView().setModel(oModel, "allDay");
 
+            /// TASK STATUS HERE ///
+
+            oModel = new JSONModel();
+			oModel.setData({taskStatus: false});
+			this.getView().setModel(oModel, "taskStatus");
+
+            /////////////////////////
+
 			oModel = new JSONModel();
 			oModel.setData({ stickyMode: StickyMode.None, enableAppointmentsDragAndDrop: true, enableAppointmentsResize: true, enableAppointmentsCreate: true });
 			this.getView().setModel(oModel, "settings");
@@ -386,7 +394,13 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 			this.byId("modifyDialog").close();
 		},
 
-		handleCheckBoxSelect: function (oEvent) {
+		handleStatusCheck: function (oEvent) {
+            oAppoint.getSource().getBindingContext("oAppointment").setProperty("/icon","sap-icon://accept");
+		},
+
+        
+
+        handleCheckBoxSelect: function (oEvent) {
 			var bSelected = oEvent.getSource().getSelected(),
 				sStartDatePickerID = bSelected ? "DTPStartDate" : "DPStartDate",
 				sEndDatePickerID = bSelected ? "DTPEndDate" : "DPEndDate",

@@ -22,7 +22,7 @@
 		<SinglePlanningCalendar
 			id="SPC1"
 			class="sapUiSmallMarginTop"
-			title= "My  To-Do List"
+			title= "My To-Do List"
 			viewChange="handleViewChange"
 			appointmentSelect="handleAppointmentSelect"
 			headerDateSelect="handleHeaderDateSelect"
@@ -55,6 +55,7 @@
 					icon= "{icon}"
 					startDate= "{startDate}"
 					endDate= "{endDate}">
+                    
 				</unified:CalendarAppointment>
 			</appointments>
 		</SinglePlanningCalendar>

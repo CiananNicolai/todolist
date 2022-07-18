@@ -51,6 +51,12 @@
 						text="All-day"
 						selected="{allDay>/allDay}"
 						select="handleCheckBoxSelect"/>
+                <CheckBox
+						id="taskStatus"
+						text="Task completed?"
+                        valueState="Success"
+						selected="{taskStatus>/taskStatus}"
+						select="handleStatusCheck"/>
 				<Label text="Type" labelFor="appType"/>
 				<Select
 						id="appType"
