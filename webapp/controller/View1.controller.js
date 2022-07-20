@@ -39,7 +39,8 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 						title: "Meet John Miller",
 						type: CalendarDayType.Type05,
 						startDate: new Date("2022", "7", "7", "7", "0"),
-						endDate: new Date("2022", "7", "7", "7", "0")
+						endDate: new Date("2022", "7", "7", "7", "0"),
+                        icon: "sap-icon://decline"
 					}
 				],
 				supportedAppointmentItems: [
@@ -394,8 +395,44 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 			this.byId("modifyDialog").close();
 		},
 
+        ////////////////////////////////
+
 		handleStatusCheck: function (oEvent) {
-            oAppoint.getSource().getBindingContext("oAppointment").setProperty("/icon","sap-icon://accept");
+            // console.log(oAppointments.bindElement("appointments", {expand: "appointments", select: "title"}));
+            // console.log(oEvent.getParameter("appointment"));
+
+            var bSelected = oEvent.getSource().getSelected(),
+            sStartTitlePickerID = bSelected
+            console.log(sStartTitlePickerID);
+            console.log(this.getView().getModel());
+            console.log(this.getView().getModel().getData().appointments[0].title);
+
+            if (bSelected == true) {
+                this.byId(title).setData(weee)
+            }
+     
+
+            // console.log(this.getView().getModel().getData().title);
+            // console.log(this.getView().getModel().getProperty("title"));
+            // console.log(oEvent.getSource().getSelected());
+
+            // var bSelected = oEvent.getSource().getSelected(),
+			// 	sStartIconID = bSelected ? "DTPStartIcon" : "DPStartIcon",
+            //     oNewIcon = "sap-icon://accept";
+            
+            // if (!bSelected) {
+            //     oNewIcon = "sap-icon://accept";
+            // }
+
+            // sStartIconID = !bSelected ? "DTPStartIcon" : "DPStartIcon";
+            // this.byId(sStartIconID).setDateValue(oNewIcon);
+            
+            // var oAppointment = oEvent.getParameter("appointment");
+			// MessageToast.show("'startDateChange' event fired.\n\nNew start date is "  + oAppointment.toString());
+
+
+            //oModel.setData(icon, "sap-icon://accept");
+            //this.getView().setModel(oModel);
 		},
 
         
@@ -537,6 +574,8 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
                 
                 ReminderAlert.setVisible(true);
            }},
+
+        ////////////////////////////////////////////////
 
         onPress: function (oEvent) {
             var ReminderAlert = this.getView().byId("ReminderAlert");
