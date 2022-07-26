@@ -1,0 +1,33 @@
+{
+    "appointments": [
+     {
+        "title": "Meet John Miller",
+						"type": "CalendarDayType.Type05",
+						"startDate": "2022, 7, 7, 7, 0",
+						"endDate": "2022, 7, 7, 7, 0",
+                        "icon": "sap-icon://decline"
+     }
+    ],
+    "supportedAppointmentItems": [
+        {
+            "text": "Team Meeting",
+            "type": "CalendarDayType.Type01"
+        },
+        {
+            "text": "Personal",
+            "type": "CalendarDayType.Type05"
+        },
+        {
+            "text": "Discussions",
+            "type": "CalendarDayType.Type08"
+        },
+        {
+            "text": "Out of office",
+            "type": "CalendarDayType.Type09"
+        },
+        {
+            "text": "Private meeting",
+            "type": "CalendarDayType.Type03"
+        }
+    ]
+ }

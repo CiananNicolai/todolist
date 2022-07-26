@@ -16,17 +16,22 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 	var StickyMode = mobileLibrary.PlanningCalendarStickyMode;
     console.log("!!!!!!! ATTENTION VIEW 1 IS LOADING !!!!!!!!!!!");
     
+    // const configData = require('../controller/appointments.json');
+    // console.log(typeof configData);
+    // console.log(configData);
+
+
 
 	return Controller.extend("todolist.todolist.controller.View1", {
         
 
-        onBeforeRendering: function() {
-            jQuery.sap.log.error("A problem occurred!");
-        },
+        // onBeforeRendering: function() {
+        //     jQuery.sap.log.error("A problem occurred!");
+        // },
         
-        onAfterRendering: function() {
-            debugger
-        },
+        // onAfterRendering: function() {
+        //     debugger
+        // },
         
 
         
@@ -78,6 +83,10 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
             oModel = new JSONModel();
 			oModel.setData({taskStatus: false});
 			this.getView().setModel(oModel, "taskStatus");
+
+            var oBig = new sap.ui.model.json.JSONModel();
+            oBig.loadData("../controller/test.json", false); 
+            console.log(JSON.stringify(oBig.getData()))
 
             /////////////////////////
 
