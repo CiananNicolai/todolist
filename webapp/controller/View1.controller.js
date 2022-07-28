@@ -37,40 +37,13 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
         
 		onInit: function() {
 
+            // var data = oMod.getData("../controller/test.json");
+            // console.log(data);
+
+
 			var oModel = new JSONModel();
 			oModel.setData({
-					startDate: new Date("2022", "7", "7"),
-					appointments: [{
-						title: "Meet John Miller",
-						type: CalendarDayType.Type05,
-						startDate: new Date("2022", "7", "7", "7", "0"),
-						endDate: new Date("2022", "7", "7", "7", "0"),
-                        icon: "sap-icon://decline"
-					}
-				],
-				supportedAppointmentItems: [
-					{
-						text: "Team Meeting",
-						type: CalendarDayType.Type01
-					},
-					{
-						text: "Personal",
-						type: CalendarDayType.Type05
-					},
-					{
-						text: "Discussions",
-						type: CalendarDayType.Type08
-					},
-					{
-						text: "Out of office",
-						type: CalendarDayType.Type09
-					},
-					{
-						text: "Private meeting",
-						type: CalendarDayType.Type03
-					}
-				]
-			});
+				});
 
 			this.getView().setModel(oModel);
 
@@ -83,10 +56,6 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
             oModel = new JSONModel();
 			oModel.setData({taskStatus: false});
 			this.getView().setModel(oModel, "taskStatus");
-
-            var oBig = new sap.ui.model.json.JSONModel();
-            oBig.loadData("../controller/test.json", false); 
-            console.log(JSON.stringify(oBig.getData()))
 
             /////////////////////////
 

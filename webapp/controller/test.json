@@ -1,5 +1,8 @@
-{ 
-    "oBig": [{"field1": "xyz",   
-            "field2": "abc"  }]
-
-}
+{
+    "person": {
+      "name": "Alice",
+      "country": "Austria",
+      "tasks": ["develop", "design", "test"],
+      "age": 30
+    }
+  }
