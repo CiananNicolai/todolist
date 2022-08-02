@@ -40,12 +40,30 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
             // var data = oMod.getData("../controller/test.json");
             // console.log(data);
 
+            // var m = new sap.ui.model.json.JSONModel("test.json")
 
-			var oModel = new JSONModel();
-			oModel.setData({
-				});
+            // console.log()
 
-			this.getView().setModel(oModel);
+            // in your controller
+            
+            // get the path to the JSON file
+            var sPath = jQuery.sap.getModulePath("todolist", "../model/appointments.json"); 
+
+            // initialize the model with the JSON file
+            var oModel = new JSONModel(sPath);
+                
+            // set the model to the view
+            this.getView().setModel(oModel, "test");
+
+            console.log(this.getView().getModel())
+
+
+
+			// var oModel = new JSONModel();
+			// oModel.setData({
+			// 	});
+
+			// this.getView().setModel(oModel);
 
 			oModel = new JSONModel();
 			oModel.setData({allDay: false});

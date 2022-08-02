@@ -16,16 +16,11 @@
             "toolsId": "26b8851b-6850-4bba-a6bd-413637a4a97b"
         },
         "dataSources": {
-            "mainService": {
-                "uri": "/sap/opu/odata/",
-                "type": "OData",
-                "settings": {
-                    "annotations": [],
-                    "localUri": "localService/metadata.xml",
-                    "odataVersion": "2.0"
-                }
-            }
-        }
+                "my_global_json_model_data_source": {
+                       "uri": "localService/test.json",
+                       "type": "JSON"
+                     }
+                   }
     },
     "sap.ui": {
         "technology": "UI5",
@@ -69,10 +64,9 @@
                     "bundleName": "todolist.todolist.i18n.i18n"
                 }
             },
-            "": {
-                "dataSource": "mainService",
-                "preload": true,
-                "settings": {}
+                "my_global_json_model": {
+                           "type": "sap.ui.model.json.JSONModel",
+                           "dataSource": "my_global_json_model_data_source"
             }
         },
         "resources": {
