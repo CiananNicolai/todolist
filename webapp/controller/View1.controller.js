@@ -47,21 +47,27 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
             // in your controller
             
             // get the path to the JSON file
-            var sPath = jQuery.sap.getModulePath("todolist", "../model/appointments.json"); 
+            // var sPath = jQuery.sap.getModulePath("todolist", "../model/appointments.json"); 
 
-            // initialize the model with the JSON file
-            var oModel = new JSONModel(sPath);
+            // // initialize the model with the JSON file
+            // var oModel = new JSONModel(sPath);
                 
-            // set the model to the view
-            this.getView().setModel(oModel, "test");
+            // // set the model to the view
+            // this.getView().setModel(oModel, "test");
 
-            console.log(this.getView().getModel())
+            // console.log(this.getView().getModel())
 
+            // var oModel = new JSONModel()
+            // oModel.loadData("../model/appointments.json");
+            // oModel.attachRequestCompleted(function(oEventModel){
+            //     console.log(oModel.getData());
+            //     //This is called after data is loading
+            // });
+            // oModel.setModel(oModel);
 
-
-			// var oModel = new JSONModel();
-			// oModel.setData({
-			// 	});
+			var oModel = new JSONModel();
+			oModel.setData({
+				});
 
 			// this.getView().setModel(oModel);
 
