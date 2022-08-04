@@ -57,13 +57,14 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 
             // console.log(this.getView().getModel())
 
-            // var oModel = new JSONModel()
-            // oModel.loadData("../model/appointments.json");
-            // oModel.attachRequestCompleted(function(oEventModel){
-            //     console.log(oModel.getData());
-            //     //This is called after data is loading
-            // });
+            var oModel = new JSONModel()
+            oModel.loadData("../model/appointments.json");
+            oModel.attachRequestCompleted(function(oEventModel){
+                console.log(oModel.getData());
+                //This is called after data is loading
+            });
             // oModel.setModel(oModel);
+            this.getView().setModel(oModel);
 
 			var oModel = new JSONModel();
 			oModel.setData({
@@ -605,6 +606,30 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 					oLegendPopover.close();
 				} else {
 					oLegendPopover.openBy(oSource);
+				}
+			});
+		},
+
+        handleImport: function (oEvent) {
+			var oSource = oEvent.getSource(),
+				oView = this.getView();
+
+			if (!this._pImportPopover) {
+				this._pImportPopover = Fragment.load({
+					id: oView.getId(),
+					name: "todolist.todolist.view.Import",
+					controller: this
+				}).then(function(oImportPopover) {
+					oView.addDependent(oImportPopover);
+					return oImportPopover;
+				});
+			}
+
+			this._pImportPopover.then(function(oImportPopover) {
+				if (oImportPopover.isOpen()){
+					oImportPopover.close();
+				} else {
+					oImportPopover.openBy(oSource);
 				}
 			});
 		},
