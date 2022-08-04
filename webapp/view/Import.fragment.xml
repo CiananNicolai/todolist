@@ -7,7 +7,7 @@
         >
 	<ResponsivePopover
 			id="importPopover"
-			title="{title}"
+			title="Import"
 			class="sapUiResponsivePadding--header"
 			placement="Auto"
             width="100%">

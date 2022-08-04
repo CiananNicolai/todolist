@@ -492,7 +492,7 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 			this._oChosenDayData = {start: oStartDate, end: oEndDate };
 			this.sPath = null;
 
-			this._arrangeDialogFragment("Create appointment");
+			this._arrangeDialogFragment("Create To-Do List Item!");
 		},
 
 		handleStartDateChange: function (oEvent) {
