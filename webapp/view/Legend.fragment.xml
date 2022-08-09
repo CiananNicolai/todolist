@@ -9,7 +9,7 @@
 			showHeader="true">
 		<PlanningCalendarLegend id="_IDGenPlanningCalendarLegend1"
 				appointmentItems="{
-					path : '../models/appointments.json/supportedAppointmentItems',
+					path : '../model/appointments.json/supportedAppointmentItems',
 					templateShareable: true
 				}">
 			<appointmentItems>

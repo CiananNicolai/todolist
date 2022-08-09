@@ -1,14 +1,14 @@
 {
-    "startDate":2022-08-03,
+    "startDate":"2022-08-03T06:00.00",
     "appointments": [
      {
         "title": "Meet God",
 						"type": "CalendarDayType.Type05",
 						"startDate": "2022-08-03T06:00.00",
-						"endDate": "2022-08-03T18:00:43",
+						"endDate": "2022-08-03T18:00:00",
                         "icon": "sap-icon://decline",
                         "allDay": false,
-                        "taskStatus": false,
+                        "taskStatus": false
      }
     ],
     "supportedAppointmentItems": [

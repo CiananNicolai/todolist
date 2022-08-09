@@ -37,40 +37,34 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
         
 		onInit: function() {
 
-            // var data = oMod.getData("../controller/test.json");
-            // console.log(data);
+            // var oModel = new JSONModel()
+            // oModel.loadData("...model/appointments.json");
+            // console.log(oModel.getData)
+            // oModel.attachRequestCompleted(function(oEventModel){
+            //     console.log(oModel.getData());
+            //     //This is called after data is loading
+            // })
+            // this.getView().setModel(oModel);
 
-            // var m = new sap.ui.model.json.JSONModel("test.json")
+            // var sServiceUrl = 'http://localhost:8080/home/user/projects/todolist-2/webapp/model/appointments';
+            // var post = $.ajax({
+            //             url : sServiceUrl,
+            //             type : "GET"
+            //         });
 
-            // console.log()
+            // fetch("appointments.json")
+            // .then(response => response.json())
+            // .then(json => {
+            //   console.log(json);
+            // })
+           
 
-            // in your controller
-            
-            // get the path to the JSON file
-            // var sPath = jQuery.sap.getModulePath("todolist", "../model/appointments.json"); 
-
-            // // initialize the model with the JSON file
-            // var oModel = new JSONModel(sPath);
-                
-            // // set the model to the view
-            // this.getView().setModel(oModel, "test");
-
-            // console.log(this.getView().getModel())
-
-            var oModel = new JSONModel()
-            oModel.loadData("../model/appointments.json");
-            oModel.attachRequestCompleted(function(oEventModel){
-                console.log(oModel.getData());
-                //This is called after data is loading
-            });
-            // oModel.setModel(oModel);
-            this.getView().setModel(oModel);
 
 			var oModel = new JSONModel();
 			oModel.setData({
 				});
 
-			// this.getView().setModel(oModel);
+			this.getView().setModel(oModel);
 
 			oModel = new JSONModel();
 			oModel.setData({allDay: false});
@@ -82,7 +76,7 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 			oModel.setData({taskStatus: false});
 			this.getView().setModel(oModel, "taskStatus");
 
-            /////////////////////////
+            ///////////////////////
 
 			oModel = new JSONModel();
 			oModel.setData({ stickyMode: StickyMode.None, enableAppointmentsDragAndDrop: true, enableAppointmentsResize: true, enableAppointmentsCreate: true });
