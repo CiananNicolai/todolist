@@ -17,12 +17,16 @@
 		<u:FileUploader
 			id="fileUploader"
 			name="myFileUpload"
-			uploadUrl="upload/"
+			uploadUrl="../webserver/model"
 			tooltip="Upload your calender dates!"
 			uploadComplete="handleUploadComplete"/>
 		<Button
 			text="Upload File"
 			press="handleUploadPress"/>
+
+        
+
+        
 	</l:VerticalLayout>
 	</ResponsivePopover>
 </core:FragmentDefinition>

@@ -46,7 +46,7 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
             // })
             // this.getView().setModel(oModel);
 
-            // var sServiceUrl = 'http://localhost:8080/home/user/projects/todolist-2/webapp/model/appointments';
+            // var sServiceUrl = 'http://localhost:8070/home/user/projects/todolist-2/webapp/model/appointments';
             // var post = $.ajax({
             //             url : sServiceUrl,
             //             type : "GET"
@@ -61,7 +61,256 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 
 
 			var oModel = new JSONModel();
-			oModel.setData({
+			oModel.setData({ 
+                startDate: new Date("2022", "07", "8"),
+                appointments: [{
+                    title: "Meet John Miller",
+                    type: CalendarDayType.Type05,
+                    startDate: new Date("2022", "07", "8", "5", "0"),
+                    endDate: new Date("2022", "07", "8", "6", "0")
+                }, {
+                    title: "Discussion of the plan",
+                    type: CalendarDayType.Type01,
+                    startDate: new Date("2022", "07", "8", "6", "0"),
+                    endDate: new Date("2022", "07", "8", "7", "9")
+                }, {
+                    title: "Lunch",
+                    text: "canteen",
+                    type: CalendarDayType.Type05,
+                    startDate: new Date("2022", "07", "8", "7", "0"),
+                    endDate: new Date("2022", "07", "8", "8", "0")
+                }, {
+                    title: "New Product",
+                    text: "room 075",
+                    type: CalendarDayType.Type01,
+                    icon: "sap-icon://meeting-room",
+                    startDate: new Date("2022", "07", "8", "8", "0"),
+                    endDate: new Date("2022", "07", "8", "9", "0")
+                }, {
+                    title: "Team meeting",
+                    text: "Regular",
+                    type: CalendarDayType.Type01,
+                    icon: "sap-icon://home",
+                    startDate: new Date("2022", "07", "8", "9", "9"),
+                    endDate: new Date("2022", "07", "8", "10", "0")
+                }, {
+                    title: "Discussion with clients regarding our new purpose",
+                    text: "room 234 and Online meeting",
+                    type: CalendarDayType.Type07,
+                    icon: "sap-icon://home",
+                    startDate: new Date("2022", "07", "8", "10", "0"),
+                    endDate: new Date("2022", "07", "8", "11", "30")
+                }, {
+                    title: "Discussion of the plan",
+                    text: "Online meeting with partners and colleagues",
+                    type: CalendarDayType.Type01,
+                    icon: "sap-icon://home",
+                    tentative: true,
+                    startDate: new Date("2022", "07", "8", "11", "30"),
+                    endDate: new Date("2022", "07", "8", "13", "00")
+                }, {
+                    title: "Discussion with clients",
+                    type: CalendarDayType.Type07,
+                    icon: "sap-icon://home",
+                    startDate: new Date("2022", "07", "8", "12", "30"),
+                    endDate: new Date("2022", "07", "8", "13", "15")
+                }, {
+                    title: "Meeting with the manager",
+                    type: CalendarDayType.Type03,
+                    startDate: new Date("2022", "07", "8", "13", "9"),
+                    endDate: new Date("2022", "07", "8", "13", "9")
+                }, {
+                    title: "Meeting with the HR",
+                    type: CalendarDayType.Type03,
+                    startDate: new Date("2022", "07", "8", "14", "0"),
+                    endDate: new Date("2022", "07", "8", "14", "15")
+                }, {
+                    title: "Call with customer",
+                    type: CalendarDayType.Type07,
+                    startDate: new Date("2022", "07", "8", "14", "15"),
+                    endDate: new Date("2022", "07", "8", "14", "30")
+                }, {
+                    title: "Prepare documentation",
+                    text: "At my desk",
+                    icon: "sap-icon://meeting-room",
+                    type: CalendarDayType.Type03,
+                    startDate: new Date("2022", "07", "8", "14", "10"),
+                    endDate: new Date("2022", "07", "8", "15", "30")
+                }, {
+                    title: "Meeting with the manager",
+                    type: CalendarDayType.Type03,
+                    startDate: new Date("2022", "07", "9", "6", "30"),
+                    endDate: new Date("2022", "07", "9", "7", "0")
+                }, {
+                    title: "Lunch",
+                    type: CalendarDayType.Type05,
+                    startDate: new Date("2022", "07", "9", "7", "0"),
+                    endDate: new Date("2022", "07", "9", "8", "0")
+                }, {
+                    title: "Team meeting",
+                    text: "online",
+                    type: CalendarDayType.Type01,
+                    startDate: new Date("2022", "07", "9", "8", "0"),
+                    endDate: new Date("2022", "07", "9", "9", "0")
+                }, {
+                    title: "Discussion with clients for the new release dates",
+                    text: "Online meeting",
+                    type: CalendarDayType.Type07,
+                    startDate: new Date("2022", "07", "9", "9", "0"),
+                    endDate: new Date("2022", "07", "9", "10", "0")
+                }, {
+                    title: "Team meeting",
+                    text: "room 5",
+                    type: CalendarDayType.Type01,
+                    startDate: new Date("2022", "07", "9", "11", "0"),
+                    endDate: new Date("2022", "07", "9", "14", "0")
+                }, {
+                    title: "Daily standup meeting",
+                    type: CalendarDayType.Type01,
+                    startDate: new Date("2022", "07", "9", "9", "0"),
+                    endDate: new Date("2022", "07", "9", "9", "15", "0")
+                }, {
+                    title: "Private meeting",
+                    type: CalendarDayType.Type03,
+                    startDate: new Date("2022", "07", "11", "9", "9"),
+                    endDate: new Date("2022", "07", "11", "9", "20")
+                }, {
+                    title: "Private meeting",
+                    type: CalendarDayType.Type03,
+                    startDate: new Date("2022", "07", "10", "6", "0"),
+                    endDate: new Date("2022", "07", "10", "7", "0")
+                }, {
+                    title: "Meeting with the manager",
+                    type: CalendarDayType.Type03,
+                    startDate: new Date("2022", "07", "10", "15", "0"),
+                    endDate: new Date("2022", "07", "10", "15", "30")
+                }, {
+                    title: "Meet John Doe",
+                    type: CalendarDayType.Type05,
+                    icon: "sap-icon://home",
+                    startDate: new Date("2022", "07", "11", "7", "0"),
+                    endDate: new Date("2022", "07", "11", "7", "30")
+                }, {
+                    title: "Team meeting",
+                    text: "online",
+                    type: CalendarDayType.Type01,
+                    startDate: new Date("2022", "07", "11", "8", "0"),
+                    endDate: new Date("2022", "07", "11", "9", "30")
+                }, {
+                    title: "Workshop",
+                    type: CalendarDayType.Type05,
+                    startDate: new Date("2022", "07", "11", "8", "30"),
+                    endDate: new Date("2022", "07", "11", "12", "0")
+                }, {
+                    title: "Team collaboration",
+                    type: CalendarDayType.Type01,
+                    startDate: new Date("2022", "07", "12", "4", "0"),
+                    endDate: new Date("2022", "07", "12", "12", "30")
+                }, {
+                    title: "Out of the office",
+                    type: CalendarDayType.Type05,
+                    startDate: new Date("2022", "07", "12", "15", "0"),
+                    endDate: new Date("2022", "07", "12", "19", "30")
+                }, {
+                    title: "Working out of the building",
+                    type: CalendarDayType.Type05,
+                    startDate: new Date("2022", "07", "12", "20", "0"),
+                    endDate: new Date("2022", "07", "12", "21", "30")
+                }, {
+                    title: "Vacation",
+                    type: CalendarDayType.Type09,
+                    text: "out of office",
+                    startDate: new Date("2022", "07", "11", "12", "0"),
+                    endDate: new Date("2022", "07", "13", "14", "0")
+                }, {
+                    title: "Reminder",
+                    type: CalendarDayType.Type09,
+                    startDate: new Date("2022", "07", "12", "00", "00"),
+                    endDate: new Date("2022", "07", "13", "00", "00")
+                }, {
+                    title: "Team collaboration",
+                    type: CalendarDayType.Type01,
+                    startDate: new Date("2022", "07", "6", "00", "00"),
+                    endDate:  new Date("2022", "07", "16", "00", "00")
+                }, {
+                    title: "Workshop out of the country",
+                    type: CalendarDayType.Type05,
+                    startDate: new Date("2022", "07", "14", "00", "00"),
+                    endDate: new Date("2022", "07", "20", "00", "00")
+                }, {
+                    title: "Payment reminder",
+                    type: CalendarDayType.Type09,
+                    startDate: new Date("2022", "07", "7", "00", "00"),
+                    endDate: new Date("2022", "07", "8", "00", "00")
+                }, {
+                    title:"Meeting with the manager",
+                    type: CalendarDayType.Type03,
+                    startDate: new Date("2022", "07", "6", "9", "0"),
+                    endDate: new Date("2022", "07", "6", "10", "0")
+                }, {
+                    title:"Daily standup meeting",
+                    type: CalendarDayType.Type01,
+                    startDate: new Date("2022", "07", "7", "10", "0"),
+                    endDate: new Date("2022", "07", "7", "10", "30")
+                }, {
+                    title:"Private meeting",
+                    type: CalendarDayType.Type03,
+                    startDate: new Date("2022", "07", "6", "11", "30"),
+                    endDate: new Date("2022", "07", "6", "12", "0")
+                }, {
+                    title:"Lunch",
+                    type: CalendarDayType.Type05,
+                    startDate: new Date("2022", "07", "6", "12", "0"),
+                    endDate: new Date("2022", "07", "6", "13", "0")
+                }, {
+                    title:"Discussion of the plan",
+                    type: CalendarDayType.Type01,
+                    startDate: new Date("2022", "07", "16", "11", "0"),
+                    endDate: new Date("2022", "07", "16", "12", "0")
+                }, {
+                    title:"Lunch",
+                    text: "canteen",
+                    type: CalendarDayType.Type05,
+                    startDate: new Date("2022", "07", "16", "12", "0"),
+                    endDate: new Date("2022", "07", "16", "13", "0")
+                }, {
+                    title:"Team meeting",
+                    text: "room 200",
+                    type: CalendarDayType.Type01,
+                    icon: "sap-icon://meeting-room",
+                    startDate:  new Date("2022", "07", "16", "16", "0"),
+                    endDate: new Date("2022", "07", "16", "17", "0")
+                }, {
+                    title:"Discussion with clients",
+                    text: "Online meeting",
+                    type: CalendarDayType.Type07,
+                    icon: "sap-icon://home",
+                    startDate: new Date("2022", "07", "17", "15", "30"),
+                    endDate: new Date("2022", "07", "17", "16", "30")
+                     }
+                    ],
+                    "supportedAppointmentItems": [
+                        {
+                            "text": "Team Meeting",
+                            "type": "CalendarDayType.Type01"
+                        },
+                        {
+                            "text": "Personal",
+                            "type": "CalendarDayType.Type05"
+                        },
+                        {
+                            "text": "Discussions",
+                            "type": "CalendarDayType.Type07"
+                        },
+                        {
+                            "text": "Out of office",
+                            "type": "CalendarDayType.Type09"
+                        },
+                        {
+                            "text": "Private meeting",
+                            "type": "CalendarDayType.Type03"
+                        }
+                    ]
 				});
 
 			this.getView().setModel(oModel);
@@ -70,18 +319,31 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 			oModel.setData({allDay: false});
 			this.getView().setModel(oModel, "allDay");
 
-            /// TASK STATUS HERE ///
+            /// Creates task status
 
             oModel = new JSONModel();
 			oModel.setData({taskStatus: false});
-			this.getView().setModel(oModel, "taskStatus");
-
-            ///////////////////////
+			this.getView().setModel(oModel, "taskStatus")
 
 			oModel = new JSONModel();
 			oModel.setData({ stickyMode: StickyMode.None, enableAppointmentsDragAndDrop: true, enableAppointmentsResize: true, enableAppointmentsCreate: true });
 			this.getView().setModel(oModel, "settings");
+
+            // Adds the decline icon to appointments that don't have them.
+
+            // var aLen = this.getView().getModel().getData().appointments;
+            //    console.log(aLen.length)
+            //     for (var i = 0; i < aLen.length; i++){
+            //         for(var x = 0; x < i; i++){
+            //             if (aLen[x].icon == "null") {
+            //                 oModel.getData().icon = "sap-icon://decline";
+            //                 oModel.updateBindings();
+            //         }
+            //     }
+            // }
 		},
+
+        // gets the types
 
 		_typeFormatter: function(sType) {
 			var sTypeText = "",
@@ -131,6 +393,8 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 			);
 		},
 
+        // resize appoinments
+
 		handleAppointmentResize: function (oEvent) {
 			var oAppointment = oEvent.getParameter("appointment"),
 				oStartDate = oEvent.getParameter("startDate"),
@@ -145,6 +409,8 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 				+ "'\n has been resized"
 			);
 		},
+
+        // drag and drop appointment creation
 
 		handleAppointmentCreateDnD: function(oEvent) {
 			var oStartDate = oEvent.getParameter("startDate"),
@@ -392,11 +658,11 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 			this.byId("modifyDialog").close();
 		},
 
-        ////////////////////////////////
-
 		handleStatusCheck: function (oEvent) {
             // console.log(oAppointments.bindElement("appointments", {expand: "appointments", select: "title"}));
             // console.log(oEvent.getParameter("appointment"));
+            
+            // Status check buton
 
             var bSelected = oEvent.getSource().getSelected(),
             sStartTitlePickerID = bSelected
@@ -407,29 +673,6 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
             if (bSelected == true) {
                 this.byId(title).setData(weee)
             }
-     
-
-            // console.log(this.getView().getModel().getData().title);
-            // console.log(this.getView().getModel().getProperty("title"));
-            // console.log(oEvent.getSource().getSelected());
-
-            // var bSelected = oEvent.getSource().getSelected(),
-			// 	sStartIconID = bSelected ? "DTPStartIcon" : "DPStartIcon",
-            //     oNewIcon = "sap-icon://accept";
-            
-            // if (!bSelected) {
-            //     oNewIcon = "sap-icon://accept";
-            // }
-
-            // sStartIconID = !bSelected ? "DTPStartIcon" : "DPStartIcon";
-            // this.byId(sStartIconID).setDateValue(oNewIcon);
-            
-            // var oAppointment = oEvent.getParameter("appointment");
-			// MessageToast.show("'startDateChange' event fired.\n\nNew start date is "  + oAppointment.toString());
-
-
-            //oModel.setData(icon, "sap-icon://accept");
-            //this.getView().setModel(oModel);
 		},
 
         
@@ -565,6 +808,8 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 			}
 		},
 
+        // Hides Reminder
+
         ReminderHide: function (oEvent) {
             var ReminderAlert = this.getView().byId("ReminderAlert");
             if(ReminderAlert.getVisible(false)) {
@@ -572,8 +817,8 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
                 ReminderAlert.setVisible(true);
            }},
 
-        ////////////////////////////////////////////////
-
+        // Reminder function
+        
         onPress: function (oEvent) {
             var ReminderAlert = this.getView().byId("ReminderAlert");
             if(ReminderAlert.getVisible()) {
@@ -604,6 +849,8 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 			});
 		},
 
+        //opens the import fragment
+
         handleImport: function (oEvent) {
 			var oSource = oEvent.getSource(),
 				oView = this.getView();
@@ -627,6 +874,8 @@ function(coreLibrary, Fragment, Controller, DateFormat, JSONModel, unifiedLibrar
 				}
 			});
 		},
+
+        // File upload function
 
         handleUploadComplete: function(oEvent) {
 			var sResponse = oEvent.getParameter("response"),
